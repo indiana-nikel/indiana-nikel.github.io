@@ -11,6 +11,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.banner-portrait {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 2em;
+			}
+			@media (min-width: 980px) {
+				.banner-portrait {
+					flex-direction: row;
+					align-items: flex-start;
+					text-align: left;
+					gap: 3em;
+				}
+			}
+
+			.contact-centered {
+				text-align: center;
+				padding-left: 0;
+			}
+			.contact-centered .icon {
+				position: static;
+				display: block;
+				margin-bottom: 0.5em;
+			}
+			@media (max-width: 979px) {
+				.contact-centered {
+					text-align: left;
+					padding-left: 3.25em;
+					position: relative;
+					margin-bottom: 1.5em;
+				}
+				.contact-centered .icon {
+					position: absolute;
+					left: 0;
+					top: 0;
+					display: inline-block;
+					margin-bottom: 0;
+				}
+			}
+
+			#contact > .inner {
+				flex-direction: column !important;
+			}
+			#contact > .inner > section {
+				width: 100% !important;
+				border-right: none !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -43,16 +95,21 @@
 
 				<!-- Banner -->
 					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, I'm Indy</h1>
-							</header>
-							<div class="content">
-								<p>I build data products and AI-powered tools &mdash;<br />
-								from the first prototype to production at scale.</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Explore</a></li>
-								</ul>
+						<div class="inner banner-portrait">
+							<div style="flex-shrink: 0;">
+								<img src="images/profile.jpeg" alt="Indiana Nikel" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; display: block; border: 3px solid rgba(255,255,255,0.3);" />
+							</div>
+							<div>
+								<header class="major">
+									<h1>Hi, I'm Indy</h1>
+								</header>
+								<div class="content">
+									<p>I build data products and AI-powered tools &mdash;<br />
+									from the first prototype to production at scale.</p>
+									<ul class="actions">
+										<li><a href="#one" class="button next scrolly">Explore</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -147,23 +204,23 @@
 							</section>
 							<section>
 								<div class="row">
-									<div class="col-4 col-12-small">
-										<div class="contact-method" style="text-align: center; padding-left: 0;">
-											<span class="icon solid alt fa-envelope" style="position: static; display: block; margin-bottom: 0.5em;"></span>
+									<div class="col-4 col-12-medium">
+										<div class="contact-method contact-centered">
+											<span class="icon solid alt fa-envelope"></span>
 											<h3>Email</h3>
 											<a href="mailto:indiana.nikel@gmail.com">indiana.nikel@gmail.com</a>
 										</div>
 									</div>
-									<div class="col-4 col-12-small">
-										<div class="contact-method" style="text-align: center; padding-left: 0;">
-											<span class="icon solid alt fa-phone" style="position: static; display: block; margin-bottom: 0.5em;"></span>
+									<div class="col-4 col-12-medium">
+										<div class="contact-method contact-centered">
+											<span class="icon solid alt fa-phone"></span>
 											<h3>Phone</h3>
 											<span>+1 (604) 360-0714</span>
 										</div>
 									</div>
-									<div class="col-4 col-12-small">
-										<div class="contact-method" style="text-align: center; padding-left: 0;">
-											<span class="icon solid alt fa-home" style="position: static; display: block; margin-bottom: 0.5em;"></span>
+									<div class="col-4 col-12-medium">
+										<div class="contact-method contact-centered">
+											<span class="icon solid alt fa-home"></span>
 											<h3>Location</h3>
 											<span>Vancouver, BC</span>
 										</div>
